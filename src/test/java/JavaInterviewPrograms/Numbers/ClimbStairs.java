@@ -8,9 +8,9 @@ public class ClimbStairs {
     }
 
     private static int climbWays(int n) {
-        if(n <= 1) {
+        if (n <= 1) {
             return 1;
         }
-        return climbWays(n-1) + climbWays(n-2);
+        return climbWays(n - 1) + climbWays(n - 2);
     }
 }

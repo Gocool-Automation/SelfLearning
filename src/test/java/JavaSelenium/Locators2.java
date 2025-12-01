@@ -6,6 +6,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class Locators2 {
@@ -18,13 +20,15 @@ public class Locators2 {
 
         //Implicit wait to handle NoSuchElement Exception
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //By id, name, className
         driver.get("https://rahulshettyacademy.com/locatorspractice");
         driver.findElement(By.id("inputUsername")).sendKeys(uName); //Using id
         driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy"); //Using name
         driver.findElement(By.className("signInBtn")).click(); //Using classname
-        Thread.sleep(2000);
+
+        //Thread.sleep(2000); //instead of thread.sleep I have impleted Explicit Wait using WebDriverWait
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("p")));
 
         System.out.println(driver.findElement(By.tagName("p")).getText());
 

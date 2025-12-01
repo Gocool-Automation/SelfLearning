@@ -12,7 +12,7 @@ public class FibonacciSeries1 {
         int num1 = 0, num2 = 1;
         int counter = 0;
 
-        while (counter < N) {
+        while (counter <= N) {
             System.out.print(num1 + " ");
 
             int num3 = num2 + num1;

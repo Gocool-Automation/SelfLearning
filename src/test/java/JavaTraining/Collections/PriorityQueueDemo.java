@@ -13,8 +13,5 @@ public class PriorityQueueDemo {
         pq.add(200);
         pq.add(5000);
         System.out.println(pq);
-
-
     }
-
 }

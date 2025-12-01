@@ -15,7 +15,7 @@ public class ClimbStairsKSteps {
 
     public static void main(String[] args) {
         int n = 4, k = 3;
-        System.out.println("Ways to climb " + n + " steps with up to " + k + " steps: " + climbWays(n, k));
+        System.out.println("Ways to climb " + n + " steps with up to max " + k + " steps: " + climbWays(n, k));
     }
 }
 

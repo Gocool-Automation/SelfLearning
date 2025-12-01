@@ -4,16 +4,19 @@ public class FibonacciSeriesUsingRecursion {
 
     //Fibonnaci Numbers using Recursive methods
     public static void main(String[] args) {
-        int n = 10;
+        int n = 5;
+        int num = 5;
         for (int i = 0; i < n; i++) {
             System.out.print(fib(i) + " ");
         }
+        System.out.println();
+        System.out.print("Ways to climb " + num + " Steps are " + fib(num));
     }
 
-    static int fib(int n) {
-        if (n <= 1)
-            return n;
-        return fib(n - 1) + fib(n - 2);
+    private static int fib(int k) {
+        if (k <= 1) {
+            return k;
+        }
+        return fib(k - 1) + fib(k - 2);
     }
-
 }
